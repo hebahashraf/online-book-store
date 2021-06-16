@@ -110,7 +110,7 @@ class BookServiceImplTest {
         when(repository.findById(1L)).thenReturn(Optional.of(book));
 
         BusinessException ex = assertThrows(BusinessException.class, () -> bookService.deleteBook(1L));
-        assertEquals(HttpStatus.NOT_FOUND, ex.getStatus());
+        assertEquals(HttpStatus.CONFLICT, ex.getStatus());
         assertEquals(errorMsg, ex.getMessage());
     }
 
