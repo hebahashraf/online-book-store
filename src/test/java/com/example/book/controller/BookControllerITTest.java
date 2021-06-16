@@ -20,7 +20,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class BankControllerITTest {
+public class BookControllerITTest {
 
     @Autowired
     private TestRestTemplate testRestTemplate;

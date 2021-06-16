@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### MAVEN ###
+.mvnw
+.mvnw.cmd
+.mvn/**
+**/.DS_Store

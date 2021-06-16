@@ -58,7 +58,11 @@ All the configurations are present in application.yml file.
 
 ```shell
 
+Swagger UI:
 http://localhost:8081/v1/swagger-ui/index.html?configUrl=/v1/api-docs/swagger-config
+
+Yaml spec.
+http://localhost:8081/v1/api-docs.yaml
 
 ```
 

@@ -66,7 +66,7 @@ public class BookServiceImpl implements BookService {
 		repository.findById(id)
 				.map(book -> {
 					if (book.getStatus() == BookStatus.DELETED)
-						throw new BusinessException(HttpStatus.NOT_FOUND, "This book is no longer sold here");
+						throw new BusinessException(HttpStatus.CONFLICT, "This book is no longer sold here");
 					book.setStatus(BookStatus.DELETED);
 					repository.save(book);
 					return book;
