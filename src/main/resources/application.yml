@@ -1,0 +1,39 @@
+server:
+  servlet.context-path: /v1
+  port: 8081
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: Hebah
+    password: Inaaya@123
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+
+book.discount:
+  promotionRules:
+    -
+      promotionCode: code1
+      discountRules:
+        -
+          type: FICTION
+          discount: 10
+        -
+          type: COMICS
+          discount: 5
+    -
+      promotionCode: code2
+      discountRules:
+        -
+          type: FICTION
+          discount: 5
